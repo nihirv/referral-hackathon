@@ -1,8 +1,16 @@
+"use client";
 import Button from "@/components/Button";
 import Wrapper from "@/components/Wrapper";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleGenerateClick = () => {
+    router.push("/listing");
+  };
+
   return (
     <Wrapper>
       <div className="flex items-center justify-center flex-col h-screen py-4 space-y-4">
@@ -29,7 +37,9 @@ export default function Home() {
             className="bg-slate-200 border border-slate-300 p-3 rounded-lg w-full"
           />
         </div>
-        <Button>Generate Request</Button>
+        <Button variant="primary" onClick={handleGenerateClick}>
+          Generate Request
+        </Button>
       </div>
     </Wrapper>
   );

@@ -27,7 +27,7 @@ const TargetCard = ({
           <div className="text-center mt-1 text-sm">{name}</div>
         </div>
         <div className="flex-grow overflow-hidden">
-          <div className="text-lg font-medium truncate">{title}</div>
+          <div className="font-medium truncate">{title}</div>
           <div className="text-gray-600 text-sm line-clamp-2">
             {description}
           </div>
